@@ -35,6 +35,30 @@ variable "cors_allow_methods" {
   default     = []
 }
 
+variable "cors_allow_headers" {
+  type        = list(string)
+  description = "(Optional) CORS Allowed headers"
+  default     = []
+}
+
+variable "cors_expose_headers" {
+  type        = list(string)
+  description = "(Optional) CORS Exposed headers"
+  default     = []
+}
+
+variable "cors_allow_cedentials" {
+  type        = bool
+  description = "(Optional) CORS Allow credentials"
+  default     = false
+}
+
+variable "cors_max_age" {
+  type        = number
+  description = "(Optional) Seconds browser should cache preflight results"
+  default     = 0
+}
+
 # Domain name configuration
 variable "custom_domain_names" {
   type = list(object({
