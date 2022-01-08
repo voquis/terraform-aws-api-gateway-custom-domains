@@ -30,7 +30,7 @@ Then create a regional API Gateway that uses the two domains and certificates
 ```terraform
 module "api_gateway" {
   source  = "voquis/api-gateway-custom-domains/aws"
-  version = "0.0.1"
+  version = "0.0.2"
   stage   = "mystage"
 
   cors_allow_origins = [
@@ -40,6 +40,10 @@ module "api_gateway" {
 
   cors_allow_methods = [
     "POST"
+  ]
+
+  cors_allow_headers = [
+    "content-type"
   ]
 
   custom_domain_names = [
