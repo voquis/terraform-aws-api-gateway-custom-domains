@@ -10,7 +10,7 @@ resource "aws_apigatewayv2_api" "this" {
     allow_origins     = var.cors_allow_origins
     allow_methods     = var.cors_allow_methods
     allow_headers     = var.cors_allow_headers
-    expose_headers    = var.expose_headers
+    expose_headers    = var.cors_expose_headers
     allow_credentials = var.cors_allow_cedentials
     max_age           = var.cors_max_age
   }
