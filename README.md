@@ -1,7 +1,7 @@
 # Terraform AWS HTTP API Gateway (v2) with custom domains and Route53 records
 Terraform 0.12+ module to create an HTTP API Gateway (v2) with the associated resources for custom domain names.  This module will create:
 - an API Gateway
-- an API Gatway stage
+- an API Gateway stage
 - API Gateway domain names
 - API Gateway mappings for each domain name
 - Route53 record for each domain name
