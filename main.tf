@@ -66,7 +66,7 @@ resource "aws_apigatewayv2_stage" "this" {
 # -------------------------------------------------------------------------------------------------
 
 resource "aws_route53_record" "this" {
-  for_each = { for i, v in var.custom_domain_names : i => v }
+  for_each = { for i, v in(var.create_route53_records ? var.custom_domain_names : []) : i => v }
 
   name    = each.value.domain_name
   type    = "A"

@@ -72,6 +72,12 @@ variable "custom_domain_names" {
   default     = []
 }
 
+variable "create_route53_records" {
+  type        = bool
+  description = "Whether or not to create Route53 records for custom domains, set to false if using wildcard certificates."
+  default     = true
+}
+
 # API Stage configutaion
 variable "stage_auto_deploy" {
   type        = string
